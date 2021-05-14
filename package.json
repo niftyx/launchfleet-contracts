@@ -7,7 +7,9 @@
     "test": "npx hardhat test",
     "compile": "npx hardhat compile",
     "test:coverage": "npx hardhat coverage",
-    "build-contracts": "sol-merger \"./contracts/*.sol\" ./build"
+    "build-contracts": "sol-merger \"./contracts/*.sol\" ./build",
+    "deploy-mumbai": "npx hardhat run --network mumbai scripts/deploy.js",
+    "deploy-matic": "npx hardhat run --network matic scripts/deploy.js"
   },
   "repository": {
     "type": "git",
