@@ -1,0 +1,18 @@
+{
+  "networks": {
+    "mumbai": {
+      "factory": "",
+      "feeRecipient": "0x3812d358fd62667Db446E2B895422b762bAB690f",
+      "feePercent": 15,
+      "baseToken": "",
+      "baseAmount": "100000000000000000000"
+    },
+    "matic": {
+      "factory": "",
+      "feeRecipient": "0x3812d358fd62667Db446E2B895422b762bAB690f",
+      "feePercent": 15,
+      "baseToken": "",
+      "baseAmount": "100000000000000000000"
+    }
+  }
+}
