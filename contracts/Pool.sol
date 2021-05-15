@@ -61,7 +61,12 @@ contract Pool is Ownable {
 
     event MetaDataChanged(string meta);
 
-    event PoolProgressChanged(uint256 totalOwed, uint256 weiRaised);
+    event PoolProgressChanged(
+        address buyer,
+        uint256 amount,
+        uint256 totalOwed,
+        uint256 weiRaised
+    );
 
     constructor(
         address _factory,
@@ -242,7 +247,7 @@ contract Pool is Ownable {
         totalOwed = totalOwed.add(amount);
         weiRaised = weiRaised.add(msg.value);
 
-        emit PoolProgressChanged(totalOwed, weiRaised);
+        emit PoolProgressChanged(msg.sender, msg.value, totalOwed, weiRaised);
     }
 
     function buy(uint256 weiAmount) public {
@@ -267,7 +272,7 @@ contract Pool is Ownable {
         totalOwed = totalOwed.add(amount);
         weiRaised = weiRaised.add(weiAmount);
 
-        emit PoolProgressChanged(totalOwed, weiRaised);
+        emit PoolProgressChanged(msg.sender, weiAmount, totalOwed, weiRaised);
     }
 
     fallback() external payable {
