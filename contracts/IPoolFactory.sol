@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./Pool.sol";
 
 interface IPoolFactory {
-    event PoolCreated(address indexed addr);
+    event PoolCreated(address indexed addr, address indexed creator);
 
     function getFeeInfo() external view returns (address, uint256);
 

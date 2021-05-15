@@ -105,7 +105,7 @@ contract PoolFactory is Initializable, OwnableUpgradeable, IPoolFactory {
 
         poolsCount = poolsCount + 1;
 
-        emit PoolCreated(address(pool));
+        emit PoolCreated(address(pool), msg.sender);
 
         return address(pool);
     }

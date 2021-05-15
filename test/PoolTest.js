@@ -167,7 +167,7 @@ describe("PoolFactory", function () {
 
       expect(transaction)
         .to.emit(poolFactory, "PoolCreated")
-        .withArgs(createdAddress);
+        .withArgs(createdAddress, owner.address);
       expect(transaction).to.emit(privatePool, "PoolInitialized").withArgs(
         testToken.address,
         NULL_ADDRESS,
@@ -404,7 +404,7 @@ describe("PoolFactory", function () {
 
       expect(transaction)
         .to.emit(poolFactory, "PoolCreated")
-        .withArgs(createdAddress);
+        .withArgs(createdAddress, owner.address);
       expect(transaction).to.emit(publicPool, "PoolInitialized").withArgs(
         testToken.address,
         NULL_ADDRESS,
@@ -517,7 +517,7 @@ describe("PoolFactory", function () {
 
       expect(transaction)
         .to.emit(poolFactory, "PoolCreated")
-        .withArgs(createdAddress);
+        .withArgs(createdAddress, owner.address);
       expect(transaction).to.emit(basePool, "PoolInitialized").withArgs(
         testToken.address,
         NULL_ADDRESS,
@@ -635,7 +635,7 @@ describe("PoolFactory", function () {
 
       expect(transaction)
         .to.emit(poolFactory, "PoolCreated")
-        .withArgs(createdAddress);
+        .withArgs(createdAddress, owner.address);
       expect(transaction)
         .to.emit(tokenPool, "PoolInitialized")
         .withArgs(
