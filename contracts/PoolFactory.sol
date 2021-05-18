@@ -12,15 +12,15 @@ import "./IPoolFactory.sol";
 contract PoolFactory is Initializable, OwnableUpgradeable, IPoolFactory {
     uint256 public poolsCount;
     address[] public pools;
-    mapping(address => bool) private isPool;
+    mapping(address => bool) public isPool;
 
     // usds for launch holder participants
-    IERC20 baseToken;
-    uint256 baseAmount;
+    IERC20 public baseToken;
+    uint256 public baseAmount;
 
     // fee
-    address feeRecipient;
-    uint256 feePercent; // 10: 1%, 15: 1.5%
+    address public feeRecipient;
+    uint256 public feePercent; // 10: 1%, 15: 1.5%
 
     function initialize(
         IERC20 _baseToken,

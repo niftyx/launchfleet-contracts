@@ -32,7 +32,7 @@ contract Pool is Ownable {
     uint256 public minWei;
     uint256 public maxWei;
 
-    PoolType poolType;
+    PoolType public poolType;
 
     string public meta;
 
